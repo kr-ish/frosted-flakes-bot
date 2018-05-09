@@ -1,0 +1,8 @@
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# compiled python
+*.pyc
+
+# credentials
+credentials.py
