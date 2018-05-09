@@ -3,9 +3,10 @@
 
 # compiled python
 *.pyc
+__pycache__
 
 # credentials
 credentials.py
 
 # count tracking file
-frosty_count.p
+times_tweeted.p
