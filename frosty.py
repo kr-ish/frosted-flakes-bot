@@ -45,7 +45,7 @@ else:
 
 proclamation = 'Frosted Flakes is the greatest cereal of all time'
 
-# Attempt to update status, if it fails prints the errors and exit
+# Attempt to update status, if it fails prints the error and exits
 try:
     api.update_status(pre_proclamation + proclamation)
 except Exception as e:
