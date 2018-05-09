@@ -3,7 +3,7 @@ I usually like my frosted flakes dry, but sometimes I have it with lactose free 
 
 ![tennis man gets it](https://i.gifer.com/1eSR.gif)
 
-
+## Share the love
 You will need a [twitter](https://twitter.com/) account and [app](https://apps.twitter.com/).  
 
 Store your `consumer_key`, `consumer_secret`, `access_token` and `access_token_secret` in `credentials.py`.
