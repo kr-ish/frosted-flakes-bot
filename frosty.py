@@ -54,5 +54,6 @@ except Exception as e:
 
 # Update counter on disk if tweet was succesfully posted
 times_tweeted += 1
+print('Successfully tweeted, tweet number {}'.format(times_tweeted))
 with open(times_tweeted_path, 'wb') as f:
     pickle.dump(times_tweeted, f)
