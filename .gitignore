@@ -7,3 +7,6 @@ credentials.py
 
 # count tracking file
 times_tweeted.p
+
+# log file
+log.txt
