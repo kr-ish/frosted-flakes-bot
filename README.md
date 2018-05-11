@@ -21,5 +21,3 @@ Setup a crob job (`$ crontab -e`) to run `frosty.py` as frequently as you'd like
 ```
 0 10 * * * ~/frosted-flakes-bot/frosty.sh >> ~/frosted-flakes-bot/log.txt 2>&1
 ```
-
-In an ideal world, I would get to have frosted flakes every day at 10am.
