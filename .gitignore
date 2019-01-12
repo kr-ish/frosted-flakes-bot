@@ -5,8 +5,8 @@ __pycache__
 # credentials
 credentials.py
 
-# count tracking file
-times_tweeted.p
+# count tracking files
+*.p
 
 # log file
 log.txt
