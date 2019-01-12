@@ -21,3 +21,5 @@ Setup a crob job (`$ crontab -e`) to run `frosty.py` as frequently as you'd like
 ```
 0 10 * * * ~/frosted-flakes-bot/frosty.sh >> ~/frosted-flakes-bot/log.txt 2>&1
 ```
+
+### Update 1/12/2019: now with added zalgotext!
