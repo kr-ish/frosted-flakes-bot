@@ -27,12 +27,12 @@ zalgo_trigger_probability = 0.005
 
 # LOAD COUNTS
 # Path to pickle file which will store the times tweeted to disk
-times_tweeted_path = './times_tweeted1.p'
+times_tweeted_path = './times_tweeted.p'
 
 # Path to pickle file which will store the zalgo number.
 # I could have put this in the times tweeted pickle, but
 # I think this is cleaner / backwards compatible.
-zalgo_number_path = './zalgo_number1.p'
+zalgo_number_path = './zalgo_number.p'
 
 # Load count stored from disk if it exists
 if os.path.isfile(times_tweeted_path):
