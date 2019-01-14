@@ -22,7 +22,7 @@ api = tweepy.API(auth)
 p = inflect.engine()
 
 # Probability that determines when the zalgo process starts
-zalgo_trigger_probability = 0.005
+zalgo_trigger_probability = 0.05
 
 
 # LOAD COUNTS
