@@ -4,6 +4,7 @@ import pickle
 import inflect
 import sys
 from random import choice, random
+import unicodedata
 from credentials import (
     consumer_key,
     consumer_secret,
@@ -24,6 +25,8 @@ p = inflect.engine()
 # Probability that determines when the zalgo process starts
 zalgo_trigger_probability = 0.05
 
+# Tweet character limit
+CHAR_LIMIT = 250
 
 # LOAD COUNTS
 # Path to pickle file which will store the times tweeted to disk
@@ -89,11 +92,25 @@ else:
         for c in word)
         for word in words)
 
+    # reduce tweet length by normalizing
+    tweet = unicodedata.normalize('NFC', tweet)  # Unicode Normalization Form C
+
+    # break tweet into multiple tweets to adhere to twitter char limit
+    # (twitter counts chars a little more intelligently, but this will do)
+    tweets = [tweet[i:i + CHAR_LIMIT] for i in range(0, len(tweet), CHAR_LIMIT)]
+
 
 # TWEET
 # Attempt to update status- print error and exit on failure
+prev_status = None
 try:
-    api.update_status(tweet)
+    for tweet in tweets:
+        if prev_status is None:
+            prev_status = api.update_status(tweet)
+        else:  # reply to previous status
+            prev_status = api.update_status(
+                tweet,
+                in_reply_to_status_id=prev_status.id)
 except Exception as e:
     print('Twitter Status Update Error: {}'.format(e))
     sys.exit(1)
